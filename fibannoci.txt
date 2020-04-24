@@ -1,0 +1,49 @@
+package Javatest;
+
+import java.util.Scanner;
+
+public class Fibannoci 
+{
+	public static void main(String[] args) {
+		int n;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("eneter the number");
+		n=sc.nextInt();
+		int f1=0;int f2=1;
+		System.out.println(f1);
+		System.out.println(f2);
+		for(int i=1;i<n;i++)
+		{
+			int sum=f1+f2;
+			System.out.println(sum);
+			f1=f2;
+			f2=sum;
+			
+		}
+		}}
+
+/*/OUTPUT:
+	eneter the number
+	20
+	0
+	1
+	1
+	2
+	3
+	5
+	8
+	13
+	21
+	34
+	55
+	89
+	144
+	233
+	377
+	610
+	987
+	1597
+	2584
+	4181
+	6765
+*/

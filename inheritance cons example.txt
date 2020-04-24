@@ -1,0 +1,77 @@
+package Javatest;
+
+class NewEmployeeDetails {
+	 private int empcode;
+	
+	 public int getEmpCode(){
+		 return empcode;
+	 }
+	 public void setEmpCode(int newValue) {
+			
+			empcode = newValue;
+			
+		}
+	 
+}
+class AddEmployeeDetails extends NewEmployeeDetails{
+	 private long Acc_no ;
+	 private long salary ;
+	 
+	 public long getAccNo() {
+		 return Acc_no;
+	 }
+	 
+	 public long getSalary() {
+		 return salary;
+	 }
+	 public void setAccNo(long newValue) {
+			
+			Acc_no = newValue;
+			
+		}
+	 
+	 public void setSalary(long newValue) {
+			
+			salary = newValue;
+			
+		}
+	 
+	
+	 }
+
+public class EmployeeDetails{
+	 int age;
+    String name;
+	 
+	 public EmployeeDetails (){
+		 
+		 age = 23;
+		 name = "Nandhini";
+		
+		  }
+	 public static void main (String [] args) {
+		 
+		 AddEmployeeDetails e = new AddEmployeeDetails();
+		 e.setEmpCode(12345);
+		 e.setAccNo(511309458);
+		 e.setSalary(15000);
+		 
+		 EmployeeDetails ed = new EmployeeDetails();
+		 
+		 System.out.println("Employee Name: " + ed.name);
+		 System.out.println("Employee Age : " + ed.age);
+		 System.out.println("Employee Code : " + e.getEmpCode());
+		 System.out.println("Employee Salary : " + e.getSalary());
+		 System.out.println("Employee Account Number : " + e.getAccNo());
+		 
+		 
+		
+	 }
+}
+/*OUTPUT:
+	Employee Name: Nandhini
+	Employee Age : 23
+	Employee Code : 12345
+	Employee Salary : 15000
+	Employee Account Number : 511309458
+*/

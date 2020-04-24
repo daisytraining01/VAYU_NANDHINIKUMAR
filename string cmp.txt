@@ -1,0 +1,23 @@
+
+package Javatest;
+
+public class compare {
+
+	public static void main(String[] args)
+	{
+	String str="REST ASSURED";
+	String strnew=str.replace("ST","");
+	System.out.println(strnew);
+	strcompare("java","java");
+      }
+
+	public static void strcompare(String string,String string2)
+	
+	{
+		System.out.println("comaparing  " +string+"  and  "+string2+":"+string.equals(string2));
+	}
+}
+/*OUTPUT:
+	RE ASSURED
+	comaparing  java  and  java:true
+*/

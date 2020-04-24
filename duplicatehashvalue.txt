@@ -1,0 +1,53 @@
+package Javatest;
+
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Set;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class hashtable {
+
+	public static void main(String[] args)
+	{
+	        Hashtable test = new Hashtable();
+	    test.put("test1", "TestVal1");
+	    test.put("test2", "TestVal2");
+	    test.put("test3", "TestVal1");
+	    test.put("test4", "TestVal2");
+	    test.put("test5", "TestVal2");
+	    test.put("test6", "TestVal3");
+	    
+	    Enumeration enumeration = test.elements();
+
+
+
+	   while (enumeration.hasMoreElements()) {
+	    System.out.println("hashtable elements: " + enumeration.nextElement());
+	}
+	    Set<String> keys = test.keySet(); // The set of keys in the test.
+
+	    java.util.Iterator<String> keyIter = keys.iterator();
+
+	    while (keyIter.hasNext()) {
+	        String key = keyIter.next();
+	        Object value = test.get(key);
+
+	        System.out.println(key + "\t" + value);
+
+	        Object nextValue = test.get(key);
+
+	        if (value.equals(nextValue)) {
+	            test.remove(key);
+	        }
+	    }
+	    System.out.println(test);
+	    }
+	}
+/*OUTPUT:
+hashtable elements: TestVal2
+hashtable elements: TestVal2
+hashtable elements: TestVal1
+hashtable elements: TestVal2
+hashtable elements: TestVal1
+test6	TestVal3*/ 

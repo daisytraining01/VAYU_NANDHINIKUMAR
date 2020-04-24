@@ -1,0 +1,44 @@
+package Javatest;
+
+public  class car implements Vehicle {
+	
+	
+	
+	public void brake(String tyre, String drum) {
+		System.out.println("Tyre wil not move after putting brake");
+	
+	}
+
+	
+	public void brake(String apply) {
+	
+		System.out.println("Brakes need to be applied");
+		
+	}
+	
+	public static void main (String[] args) {
+		
+		car c = new car();
+		
+		String tyre = null;
+		String drum = null;
+         c.brake(tyre, drum);
+		String apply = null;
+		c.brake(apply);
+		
+		
+	}
+
+}
+/*OUTPUT:
+	Tyre wil not move after putting brake
+	Brakes need to be applied
+*/
+
+package Javatest;
+
+public interface Vehicle {
+	public void brake (String tyre, String drum );
+	public void brake (String apply);
+
+}
